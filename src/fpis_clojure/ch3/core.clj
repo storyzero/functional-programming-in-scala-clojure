@@ -21,3 +21,9 @@
     [a b 3 4 & _] (+ a b)
     [h & t] (+ h (sum t))
     :else (println "failed")))
+
+; 3.2
+(defn tail [xs]
+  (match xs
+    [] (throw (IllegalArgumentException.))
+    [_ & t] t))
